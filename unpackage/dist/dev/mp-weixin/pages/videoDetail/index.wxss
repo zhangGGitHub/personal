@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.video.data-v-03f9d6ce {
+  width: 100%;
+  height: 98vh;
+}
+.back.data-v-03f9d6ce {
+  position: absolute;
+  top: 0;
+}
+.shop.data-v-03f9d6ce {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  bottom: 14%;
+  left: 8%;
+  box-shadow: 0 0 40rpx #FFFFFF;
+}
+.padding-top-none.data-v-03f9d6ce {
+  padding-top: 0;
+}
+.border-bottom.data-v-03f9d6ce {
+  position: relative;
+}
+.border-bottom.data-v-03f9d6ce:after {
+  content: '';
+  display: block;
+  width: 93%;
+  height: 1px;
+  background-color: #ebedf0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.left_btn.data-v-03f9d6ce {
+  color: #FFFFFF;
+  height: 80rpx;
+  font-weight: 500;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  border: none;
+  border-radius: 40rpx;
+  background: -webkit-linear-gradient(left, #70a1ff, #3742fa);
+  background: linear-gradient(to right, #70a1ff, #3742fa);
+  box-shadow: 4rpx 4rpx 10rpx #70a1ff;
+}
+.left_btn.data-v-03f9d6ce:active {
+  -webkit-transform: translate(2rpx, 2rpx);
+          transform: translate(2rpx, 2rpx);
+}
+

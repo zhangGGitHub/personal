@@ -1,0 +1,113 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/index",
+    "pages/shop/index",
+    "pages/pay/index",
+    "pages/personal/index",
+    "pages/merchant/index",
+    "pages/addressList/index",
+    "pages/addAddress/index",
+    "pages/modifyAddress/index",
+    "pages/orderList/index",
+    "pages/exploreMore/index",
+    "pages/videoShop/index",
+    "pages/videoDetail/index",
+    "pages/merchantSide/index",
+    "pages/merchantIndex/index",
+    "pages/merchantChangPassword/index",
+    "pages/sellDetails/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "生鲜商城",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#1296db",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/home1.png",
+        "selectedIconPath": "static/home.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/shop/index",
+        "iconPath": "static/cate1.png",
+        "selectedIconPath": "static/cate.png",
+        "text": "商品"
+      },
+      {
+        "pagePath": "pages/pay/index",
+        "iconPath": "static/pay1.png",
+        "selectedIconPath": "static/pay.png",
+        "text": "买单"
+      },
+      {
+        "pagePath": "pages/personal/index",
+        "iconPath": "static/my1.png",
+        "selectedIconPath": "static/my.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-action-sheet": "/wxcomponents/vant/action-sheet/index",
+    "van-area": "/wxcomponents/vant/area/index",
+    "van-button": "/wxcomponents/vant/button/index",
+    "van-card": "/wxcomponents/vant/card/index",
+    "van-cell": "/wxcomponents/vant/cell/index",
+    "van-cell-group": "/wxcomponents/vant/cell-group/index",
+    "van-checkbox": "/wxcomponents/vant/checkbox/index",
+    "van-checkbox-group": "/wxcomponents/vant/checkbox-group/index",
+    "van-col": "/wxcomponents/vant/col/index",
+    "van-dialog": "/wxcomponents/vant/dialog/index",
+    "van-dropdown-menu": "/wxcomponents/vant/dropdown-menu/index",
+    "van-dropdown-item": "/wxcomponents/vant/dropdown-item/index",
+    "van-field": "/wxcomponents/vant/field/index",
+    "van-goods-action": "/wxcomponents/vant/goods-action/index",
+    "van-goods-action-icon": "/wxcomponents/vant/goods-action-icon/index",
+    "van-goods-action-button": "/wxcomponents/vant/goods-action-button/index",
+    "van-icon": "/wxcomponents/vant/icon/index",
+    "van-loading": "/wxcomponents/vant/loading/index",
+    "van-nav-bar": "/wxcomponents/vant/nav-bar/index",
+    "van-notice-bar": "/wxcomponents/vant/notice-bar/index",
+    "van-notify": "/wxcomponents/vant/notify/index",
+    "van-panel": "/wxcomponents/vant/panel/index",
+    "van-popup": "/wxcomponents/vant/popup/index",
+    "van-progress": "/wxcomponents/vant/progress/index",
+    "van-radio": "/wxcomponents/vant/radio/index",
+    "van-radio-group": "/wxcomponents/vant/radio-group/index",
+    "van-row": "/wxcomponents/vant/row/index",
+    "van-search": "/wxcomponents/vant/search/index",
+    "van-slider": "/wxcomponents/vant/slider/index",
+    "van-stepper": "/wxcomponents/vant/stepper/index",
+    "van-steps": "/wxcomponents/vant/steps/index",
+    "van-sticky": "/wxcomponents/vant/sticky/index",
+    "van-submit-bar": "/wxcomponents/vant/submit-bar/index",
+    "van-swipe-cell": "/wxcomponents/vant/swipe-cell/index",
+    "van-switch": "/wxcomponents/vant/switch/index",
+    "van-tab": "/wxcomponents/vant/tab/index",
+    "van-tabs": "/wxcomponents/vant/tabs/index",
+    "van-tabbar": "/wxcomponents/vant/tabbar/index",
+    "van-tabbar-item": "/wxcomponents/vant/tabbar-item/index",
+    "van-tag": "/wxcomponents/vant/tag/index",
+    "van-toast": "/wxcomponents/vant/toast/index",
+    "van-transition": "/wxcomponents/vant/transition/index",
+    "van-tree-select": "/wxcomponents/vant/tree-select/index",
+    "van-datetime-picker": "/wxcomponents/vant/datetime-picker/index",
+    "van-rate": "/wxcomponents/vant/rate/index",
+    "van-collapse": "/wxcomponents/vant/collapse/index",
+    "van-collapse-item": "/wxcomponents/vant/collapse-item/index",
+    "van-picker": "/wxcomponents/vant/picker/index",
+    "van-uploader": "/wxcomponents/vant/uploader/index",
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap18.json"
+}

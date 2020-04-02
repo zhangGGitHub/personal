@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "买单",
+  "disableScroll": true,
+  "usingComponents": {
+    "keyboard": "/components/keyboard/index"
+  }
+}

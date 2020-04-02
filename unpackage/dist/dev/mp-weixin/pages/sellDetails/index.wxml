@@ -1,0 +1,1 @@
+<view class="data-v-a7cc9d06"><view class="nav flex data-v-a7cc9d06"><block wx:for="{{tab}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view data-event-opts="{{[['tap',[['clickTab',[index]]]]]}}" class="{{['tab data-v-a7cc9d06',(num==index)?'active':'']}}" bindtap="__e">{{item}}</view></block></view></view>
