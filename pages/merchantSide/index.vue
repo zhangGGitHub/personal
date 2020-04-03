@@ -22,6 +22,10 @@
 					<text class="cuIcon-goodsfill" />
 					<p>商品管理</p>
 				</view>
+				<view class="box" @click="toLogistics">
+					<text class="cuIcon-deliver_fill" />
+					<p>物流信息</p>
+				</view>
 				<view class="box" @click="toMerchantMore">
 					<text class="cuIcon-more" />
 					<p>更多</p>
@@ -61,11 +65,18 @@
 			},
 			// 跳转商家端店铺管理
 			toMerchantShopManager: function() {
-				Toast('跳转商家端店铺管理')
+				uni.navigateTo({
+					url:'../merchantShop/index'
+				})
 			},
 			// 跳转商家端商品管理
 			toMerchantCommodityManeger: function() {
 				Toast('跳转商家端商品管理')
+			},
+			toLogistics:function(){
+				uni.navigateTo({
+					url:'../logistics/index'
+				})
 			},
 			// 跳转商家端更多
 			toMerchantMore: function() {

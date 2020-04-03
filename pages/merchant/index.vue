@@ -23,7 +23,6 @@
 			<van-cell-group>
 				<van-cell title="修改密码" @click="toMerchantChangPassword" />
 				<van-cell title="售卖详情" @click="toSellDetails" />
-				<van-cell title="发货" @click="toDeliverGoods" />
 			</van-cell-group>
 		</view>
 	</view>
@@ -67,10 +66,6 @@
 				uni.navigateTo({
 					url:'../sellDetails/index'
 				})
-			},
-			// 跳转商家端发货
-			toDeliverGoods: function() {
-				Toast('跳转商家端发货')
 			},
 		}
 	}

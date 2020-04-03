@@ -1,13 +1,20 @@
 <template>
 	<view style="margin-top: 20rpx;">
 		<van-cell-group>
-			<view class="flex justify-between" style="align-items: center">
-				<van-field label="手机号" type="number" placeholder="请输入手机号" @input="getMobile" style="80%" />
-				<van-button v-if="codeStatus" block type="info" custom-class="shadow_btn" @click="getVerificationCode" style="width:35%">发送验证码</van-button>
-				<van-button v-else block type="info" custom-class="shadow_btn" @click="getVerificationCodeAgain(time)" style="width:35%">{{time}}s再次发送</van-button>
+			<view class="cu-form-group">
+				<view class="title">手机号</view>
+				<input placeholder="请输入手机号" name="input" @input="getMobile"></input>
+				<button v-if="codeStatus" class='cu-btn bg-green shadow' @click="getVerificationCode">验证码</button>
+				<button v-else class='cu-btn bg-green shadow' @click="getVerificationCodeAgain(time)">验证码</button>
 			</view>
-			<van-field label="验证码" type="number" placeholder="请输入验证码" @input="getCode" />
-			<van-field label="新密码" type="password" placeholder="请输入新密码" @input="getNewPassword" />
+			<view class="cu-form-group">
+				<view class="title">验证码</view>
+				<input placeholder="请输入验证码" name="input" @input="getCode"></input>
+			</view>
+			<view class="cu-form-group">
+				<view class="title">新密码</view>
+				<input placeholder="请输入新密码" name="input" @input="getNewPassword"></input>
+			</view>
 		</van-cell-group>
 		<button type="default" class="sure" @click="surePassword">确认</button>
 	</view>

@@ -4,7 +4,7 @@
 		 :autoplay="true" :interval="2000" :duration="1000" :circular="true" @change="changeImg">
 			<swiper-item v-for="(item,index) in topImageList" :key="index">
 				<view class="swiper-item" style="height: 100%;">
-					<image :src="item.url" mode=""></image>
+					<image :src="item.resourceUrl" mode=""></image>
 				</view>
 			</swiper-item>
 		</swiper>
@@ -12,7 +12,7 @@
 		<view class="mask text-white flex align-center justify-between">
 			<view>
 				<view class="text-sm">来自小店</view>
-				<view class="text-lg text-bold padding-top-xs">{{topImageList[imgIndex].name}}</view>
+				<view class="text-lg text-bold padding-top-xs">{{topImageList[imgIndex].goodsName}}</view>
 			</view>
 			<view>
 				详情<text class="cuIcon-right" />
@@ -21,16 +21,16 @@
 		<!-- 立即购买当前轮播商品 -->
 		<view class="padding flex align-center justify-between">
 			<text class="text-price text-red text-xl text-bold">{{topImageList[imgIndex].price}}</text>
-			<view class="cu-btn bg-red sm btn">立即购买</view>
+			<view class="cu-btn bg-red sm btn" @click="purchase">立即购买</view>
 		</view>
 		<view>
 			<view class="title text-gray padding">同款</view>
 			<view class="img_group flex flex-wrap justify-between">
-				<view v-for="(item,index) in 7" :key="index" class="img_list" @click="toVideoDetail">
-					<image src="https://dummyimage.com/600x400/ed4068/ffffff" style="width: 100%;height: 100%;"></image>
+				<view v-for="(item,index) in videoList" :key="index" class="img_list" @click="toVideoDetail">
+					<image :src="item.resourceUrl" style="width: 100%;height: 100%;"></image>
 					<view class="img_detail flex align-center justify-between text-white">
 						<view class="flex align-center" style="flex: 1;">
-							<view class="cu-avatar sm round" style="background-image:url(https://dummyimage.com/600x400/ffffff/ed4068)" />
+							<view class="cu-avatar sm round" style="" />
 							<view class="margin-left-xs text-sm text-cut" style="width: 120rpx;">海鲜商贸城城</view>
 						</view>
 						<view class="flex align-center">
@@ -49,22 +49,15 @@
 		data() {
 			return {
 				// 顶部图片列表
-				topImageList: [{
-					url: 'https://dummyimage.com/600x400/ed4068/ffffff',
-					price: 20.00,
-					name: '小鱼干'
-				}, {
-					url: 'https://dummyimage.com/600x400/569e34/ffffff',
-					price: 30.00,
-					name: '苹果'
-				}, {
-					url: 'https://dummyimage.com/600x400/e69e6e/ffffff',
-					price: 19.00,
-					name: '吸尘器'
-				}],
+				topImageList: [],
 				// 滑动切换的图片下标
-				imgIndex: 0
+				imgIndex: 0,
+				data:'',
+				videoList:''
 			}
+		},
+		onShow() {
+			this.getData()
 		},
 		methods: {
 			// 改变轮播图时
@@ -76,6 +69,59 @@
 				uni.navigateTo({
 					url: '../videoDetail/index'
 				})
+			},
+			getData: function() {
+				var that = this
+				this.uniFly.post({
+					url: 'http://23x1o38664.iask.in/app/system/goodsResource/list'
+				}).then(res => {
+					console.log('视频列表', res.data.data)
+					that.topImageList = res.data.data.image
+					that.videoList = res.data.data.video
+				})
+			},
+			//点击确认付款==>检查是否登录==>检查是否有默认地址==>生成订单==>支付
+			purchase(){
+				// confirmPay: function() {
+				// 	var that = this
+				// 	// 检查是否登录
+				// 	if (uni.getStorageSync('isLogin')) {
+				// 		// 检查有没有默认地址
+				// 		if (this.isDefaultAddress) {
+				// 			this.isShowShopCar = false
+				// 			Toast.loading({
+				// 				duration: 0,
+				// 				mask: true,
+				// 				message: '生成订单'
+				// 			})
+				// 			// 获取订单号
+				// 			this.getOrderNumber()
+				// 		} else {
+				// 			this.isShowShopCar = false
+				// 			Dialog.confirm({
+				// 				title: '提示',
+				// 				message: '检测到未设置收货地址',
+				// 				confirmButtonText: '去设置'
+				// 			}).then(() => {
+				// 				uni.navigateTo({
+				// 					url: '../addressList/index'
+				// 				})
+				// 			}).catch(() => {
+				// 				Dialog.close()
+				// 			})
+				// 		}
+				// 	} else {
+				// 		this.isShowShopCar = false
+				// 		Dialog.alert({
+				// 			title: '提示',
+				// 			message: '请先登录'
+				// 		}).then(() => {
+				// 			uni.navigateTo({
+				// 				url:'../login/index'
+				// 			})
+				// 		})
+				// 	}
+				// },
 			}
 		}
 	}

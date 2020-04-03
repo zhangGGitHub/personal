@@ -12,7 +12,7 @@
 			</swiper-item>
 		</swiper>
 
-		<view class="img_group flex flex-wrap justify-between">
+		<view class="img_group flex flex-wrap justify-between" style="margin-top: 60rpx;">
 			<view v-for="(item,index) in 5" :key="index" class="img_list" @click="toVideoDetail">
 				<image src="https://dummyimage.com/600x400/ed4068/ffffff" style="width: 100%;height: 100%;"></image>
 				<view class="img_detail flex align-center justify-between text-white">

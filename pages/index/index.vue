@@ -132,10 +132,12 @@
 				}).then(res => {
 					console.log('获取商铺列表', res)
 					if (res.data.code == 0) {
+						console.log('shopList',res)
 						this.shopList = res.data.rows
 						res.data.rows.forEach(r => {
 							this.shopNameList.push(r.shopsName)
 						})
+						//=====不是太理解=====
 						if (uni.getStorageSync('selectShopDetail')) {
 							for (var i = 0; i < res.data.rows.length; i++) {
 								if (res.data.rows[i].id == uni.getStorageSync('selectShopDetail').id) {
@@ -184,9 +186,7 @@
 				}).then(res => {
 					console.log('商品分类', res)
 					if (res.data.code == 0) {
-						this.shopHotList = res.data.data.filter(r => {
-							return r.typeName == '热搜'
-						})[0].goods
+						this.shopHotList = res.data.data.filter(r => {return r.typeName == '热搜'})[0].goods
 					} else {
 						Toast(res.data.msg)
 					}

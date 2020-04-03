@@ -113,6 +113,16 @@
 			"style": {
 				"navigationBarTitleText": "售卖详情"
 			}
+		},{
+			"path": "pages/merchantShop/index",
+			"style": {
+				"navigationBarTitleText": "店铺管理"
+			}
+		},{
+			"path": "pages/logistics/index",
+			"style": {
+				"navigationBarTitleText": "物流信息"
+			}
 		}
 
 	],
